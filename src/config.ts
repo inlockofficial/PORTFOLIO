@@ -1,175 +1,131 @@
-export type Lang = "en" | "ar" | "fr";
-
-export interface PortfolioItem {
-  title: Record<Lang, string>;
-  category: Record<Lang, string>;
-  accent: string; // tailwind gradient classes
-  emoji: string;
-}
-
-export interface CONFIGType {
-  creator: {
-    name: Record<Lang, string>;
-    initials: string;
-    avatarUrl?: string;
-    title: Record<Lang, string>;
-    bio: Record<Lang, string>;
-  };
-  status: {
-    available: Record<Lang, string>;
-    location: Record<Lang, string>;
-  };
-  portfolio: PortfolioItem[];
-  stats: { value: string; label: Record<Lang, string> }[];
-  whyMe: {
-    heading: Record<Lang, string>;
-    body: Record<Lang, string>;
-  };
-  services: { items: Record<Lang, string[]> };
-  testimonial: {
-    quote: Record<Lang, string>;
-    author: Record<Lang, string>;
-  };
-  cta: {
-    title: Record<Lang, string>;
-    subtitle: Record<Lang, string>;
-    button: Record<Lang, string>;
-    href: string;
-  };
-  ui: {
-    sectionLabels: Record<string, Record<Lang, string>>;
-  };
-}
-
 export const CONFIG: CONFIGType = {
   creator: {
     name: {
-      en: "Layla Hassan",
-      ar: "ليلى حسن",
-      fr: "Layla Hassan",
+      en: "Hafsa Kadari",
+      ar: "حفصة قدري",
+      fr: "Hafsa Kadari",
     },
-    initials: "LH",
-    // avatarUrl: "https://example.com/avatar.jpg", // optional
+    initials: "HK",
     title: {
-      en: "UGC Creator & Short-Form Strategist",
-      ar: "صانعة محتوى UGC واستراتيجية محتوى قصير",
-      fr: "Créatrice UGC & Stratège Vidéo Courte",
+      en: "Aesthetic UGC & Visual Storyteller",
+      ar: "صانعة محتوى UGC وقصص بصرية",
+      fr: "Créatrice UGC & Storyteller Visuelle",
     },
     bio: {
-      en: "I craft scroll-stopping, authentic content that turns viewers into customers. Trusted by 40+ DTC brands across beauty, wellness, and lifestyle.",
-      ar: "أصنع محتوى أصيل يوقف التمرير ويحوّل المشاهدين إلى عملاء. موثوقة من قبل أكثر من 40 علامة تجارية في الجمال والعافية ونمط الحياة.",
-      fr: "Je crée du contenu authentique qui arrête le scroll et convertit. Approuvée par plus de 40 marques DTC en beauté, bien-être et lifestyle.",
+      en: "I bridge the gap between tech-savviness and creative aesthetics. I craft high-conversion, 'quiet luxury' content that turns viewers into loyal customers.",
+      ar: "أجمع بين الخبرة التقنية والجمالية الإبداعية. أصنع محتوى 'الفخامة الهادئة' عالي التحويل الذي يحول المشاهدين إلى عملاء مخلصين.",
+      fr: "Je fais le pont entre expertise technique et esthétique créative. Je crée du contenu 'quiet luxury' à haute conversion pour fidéliser votre audience.",
     },
   },
   status: {
     available: {
-      en: "Available for May bookings",
-      ar: "متاحة لحجوزات مايو",
-      fr: "Disponible pour mai",
+      en: "Accepting Q3 & Q4 collaborations",
+      ar: "متاحة لتعاونات الربع الثالث والرابع",
+      fr: "Disponible pour collaborations Q3 & Q4",
     },
     location: {
-      en: "Dubai → Worldwide",
-      ar: "دبي ← حول العالم",
-      fr: "Dubaï → International",
+      en: "Sidi Bel Abbès → Worldwide",
+      ar: "سيدي بلعباس ← حول العالم",
+      fr: "Sidi Bel Abbès → International",
     },
   },
   portfolio: [
     {
       title: { en: "Beauty & Skincare", ar: "الجمال والعناية", fr: "Beauté & Soin" },
-      category: { en: "12 campaigns", ar: "١٢ حملة", fr: "12 campagnes" },
-      accent: "from-rose-300 via-peach to-orange-300",
+      category: { en: "15+ campaigns", ar: "١٥+ حملة", fr: "15+ campagnes" },
+      accent: "from-pink-200 via-rose-100 to-orange-100",
       emoji: "💄",
     },
     {
-      title: { en: "Tech & Lifestyle", ar: "التقنية ونمط الحياة", fr: "Tech & Lifestyle" },
-      category: { en: "9 campaigns", ar: "٩ حملات", fr: "9 campagnes" },
-      accent: "from-cyan-300 via-sky-300 to-blue-300",
-      emoji: "📱",
+      title: { en: "Tech & Digital", ar: "التقنية والخدمات", fr: "Tech & Digital" },
+      category: { en: "10+ SaaS demos", ar: "١٠+ عروض تقنية", fr: "10+ démos SaaS" },
+      accent: "from-slate-300 via-blue-100 to-cyan-100",
+      emoji: "💻",
     },
     {
-      title: { en: "Food & Wellness", ar: "الطعام والعافية", fr: "Food & Wellness" },
-      category: { en: "18 campaigns", ar: "١٨ حملة", fr: "18 campagnes" },
-      accent: "from-lime-300 via-emerald-300 to-teal-300",
-      emoji: "🥑",
+      title: { en: "Minimalist Style", ar: "أزياء هادئة", fr: "Style Minimaliste" },
+      category: { en: "8+ lookbooks", ar: "٨+ كتيبات أزياء", fr: "8+ lookbooks" },
+      accent: "from-stone-300 via-neutral-100 to-slate-100",
+      emoji: "✨",
     },
   ],
   stats: [
     {
-      value: "12.4M",
-      label: { en: "Total views", ar: "إجمالي المشاهدات", fr: "Vues totales" },
+      value: "1.2M",
+      label: { en: "Monthly reach", ar: "الوصول الشهري", fr: "Portée mensuelle" },
     },
     {
-      value: "40+",
-      label: { en: "Happy clients", ar: "عميل سعيد", fr: "Clients satisfaits" },
+      value: "30+",
+      label: { en: "Brand partners", ar: "شريك تجاري", fr: "Marques partenaires" },
     },
   ],
   whyMe: {
     heading: {
-      en: "Why work with me",
-      ar: "لماذا تعمل معي",
-      fr: "Pourquoi travailler avec moi",
+      en: "The Strategy Behind the Lens",
+      ar: "الاستراتيجية خلف العدسة",
+      fr: "La Stratégie derrière l'Objectif",
     },
     body: {
-      en: "I blend strategy and storytelling to build content that performs. From hook to CTA, every second is engineered for retention — and the results speak for themselves: 3.2× average engagement lift across paid and organic.",
-      ar: "أمزج بين الاستراتيجية وسرد القصص لبناء محتوى يحقق أداءً عالياً. من الجملة الافتتاحية إلى الدعوة لاتخاذ إجراء، كل ثانية مصممة للاحتفاظ — والنتائج تتحدث: ٣٫٢× زيادة في التفاعل.",
-      fr: "Je mêle stratégie et storytelling pour créer du contenu performant. Du hook au CTA, chaque seconde est pensée pour la rétention — résultat : engagement multiplié par 3,2 en moyenne.",
+      en: "As a Computer Science student, I don't just 'make videos'—I understand the algorithms and UX patterns that drive engagement. I blend data-driven hooks with an 'old money' minimalist aesthetic to ensure your brand feels both premium and approachable.",
+      ar: "بصفتي طالبة في علوم الكمبيوتر، أنا لا 'أصنع فيديوهات' فحسب، بل أفهم الخوارزميات وأنماط تجربة المستخدم. أمزج بين الاستراتيجية والجمالية الهادئة لضمان ظهور علامتك التجارية بشكل راقٍ.",
+      fr: "En tant qu'étudiante en informatique, je ne fais pas que 'des vidéos' : je comprends les algorithmes. J'allie stratégie de conversion et esthétique minimaliste pour un rendu premium.",
     },
   },
   services: {
     items: {
       en: [
-        "UGC video production (1–3 deliverables)",
-        "Short-form content strategy",
-        "Hook & script writing",
-        "Whitelisting & paid usage rights",
-        "Monthly retainer packages",
+        "Organic UGC (TikTok/Reels)",
+        "High-performance Paid Ads",
+        "Tech & App unboxing videos",
+        "Aesthetic Product B-roll",
+        "Scriptwriting & Hook optimization",
       ],
       ar: [
-        "إنتاج فيديوهات UGC (١-٣ تسليمات)",
-        "استراتيجية المحتوى القصير",
-        "كتابة الجمل الافتتاحية والسكريبت",
-        "حقوق الاستخدام المدفوع",
-        "باقات شهرية متكاملة",
+        "محتوى UGC عضوي (تيك توك/ريلز)",
+        "إعلانات مدفوعة عالية الأداء",
+        "فيديوهات فتح الصناديق للتقنية",
+        "تصوير جمالي للمنتجات",
+        "كتابة السكريبت وتحسين الافتتاحية",
       ],
       fr: [
-        "Production vidéo UGC (1–3 livrables)",
-        "Stratégie de contenu court",
-        "Écriture de hooks & scripts",
-        "Whitelisting & droits d'usage",
-        "Forfaits mensuels",
+        "UGC Organique (TikTok/Reels)",
+        "Ads payantes haute performance",
+        "Unboxing Tech & Applications",
+        "B-roll produit esthétique",
+        "Écriture de scripts & optimisation",
       ],
     },
   },
   testimonial: {
     quote: {
-      en: "Layla didn't just deliver content — she delivered our best-performing ad of the quarter.",
-      ar: "ليلى لم تقدم محتوى فحسب — بل قدمت أفضل إعلان أداءً في الربع.",
-      fr: "Layla n'a pas livré du contenu — elle a livré notre meilleure pub du trimestre.",
+      en: "Hafsa understands brand DNA instantly. Her content saw a 40% increase in our ad engagement within 48 hours.",
+      ar: "حفصة تفهم هوية العلامة التجارية فوراً. حقق محتواها زيادة بنسبة ٤٠٪ في التفاعل خلال ٤٨ ساعة.",
+      fr: "Hafsa comprend instantanément l'ADN de la marque. Son contenu a boosté notre engagement de 40% en 48h.",
     },
     author: {
-      en: "— Sara M., Growth Lead @ Glow Co.",
-      ar: "— سارة م.، قائدة النمو في Glow Co.",
-      fr: "— Sara M., Growth Lead @ Glow Co.",
+      en: "— Creative Director @ Luxe Beauty",
+      ar: "— المدير الإبداعي في Luxe Beauty",
+      fr: "— Directrice Créative @ Luxe Beauty",
     },
   },
   cta: {
-    title: { en: "Work with me", ar: "اعمل معي", fr: "Travaillons ensemble" },
+    title: { en: "Let's Scale Your Brand", ar: "لنطور علامتك التجارية", fr: "Boostons votre marque" },
     subtitle: {
-      en: "Let's build something that converts.",
-      ar: "لنبنِ شيئاً يحوّل.",
-      fr: "Créons quelque chose qui convertit.",
+      en: "Ready to create content that actually converts?",
+      ar: "هل أنت مستعد لإنشاء محتوى يحقق نتائج فعلاً؟",
+      fr: "Prêt à créer du contenu qui convertit vraiment ?",
     },
-    button: { en: "Start a project →", ar: "ابدأ مشروعاً ←", fr: "Démarrer →" },
-    href: "mailto:hello@layla.studio",
+    button: { en: "Book a Discovery Call →", ar: "احجز مكالمة استشارية ←", fr: "Réserver un appel →" },
+    href: "mailto:hello@hafsa.studio",
   },
   ui: {
     sectionLabels: {
       status: { en: "Status", ar: "الحالة", fr: "Statut" },
       language: { en: "Language", ar: "اللغة", fr: "Langue" },
-      portfolio: { en: "Portfolio", ar: "الأعمال", fr: "Portfolio" },
+      portfolio: { en: "Expertise", ar: "الخبرات", fr: "Expertise" },
       stats: { en: "Impact", ar: "التأثير", fr: "Impact" },
       services: { en: "Services", ar: "الخدمات", fr: "Services" },
-      testimonial: { en: "Testimonial", ar: "شهادة", fr: "Témoignage" },
+      testimonial: { en: "Feedback", ar: "الآراء", fr: "Avis" },
     },
   },
 };
