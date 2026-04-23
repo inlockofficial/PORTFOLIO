@@ -50,8 +50,7 @@ export const CONFIG: CONFIGType = {
       fr: "Chloe Evans",
     },
     initials: "CE",
-    // Make sure your new placeholder image is in /public/avatar-placeholder.jpg
-    avatarUrl: "/avatar-placeholder.jpg", 
+    avatarUrl: "/avatar-placeholder.jpg",
     title: {
       en: "Aesthetic Tech & Wellness UGC",
       ar: "صانعة محتوى تقنية وعافية UGC",
@@ -79,24 +78,23 @@ export const CONFIG: CONFIGType = {
     {
       title: { en: "Mindful Tech", ar: "التقنية الواعية", fr: "Tech Consciente" },
       category: { en: "8+ SaaS Demos", ar: "٨+ عروض برمجية", fr: "8+ démos SaaS" },
-      // I softened these gradients to match the 'Quiet Luxury' London aesthetic
-      accent: "from-slate-200 via-stone-100 to-zinc-100", 
+      accent: "from-slate-200 via-stone-100 to-zinc-100",
       emoji: "💻",
-      href: "https://your-tech-portfolio-link.com", 
+      href: "https://your-tech-portfolio.com",
     },
     {
       title: { en: "Wellness & Style", ar: "العافية والأناقة", fr: "Bien-être & Style" },
       category: { en: "15+ Campaigns", ar: "١٥+ حملة", fr: "15+ campagnes" },
       accent: "from-rose-100 via-peach-100 to-orange-100",
       emoji: "✨",
-      href: "https://your-wellness-portfolio-link.com",
+      href: "https://your-wellness-portfolio.com",
     },
     {
       title: { en: "Minimalist Living", ar: "الحياة البسيطة", fr: "Vie Minimaliste" },
       category: { en: "10+ Lookbooks", ar: "١٠+ كتيبات أزياء", fr: "10+ lookbooks" },
       accent: "from-emerald-100 via-teal-100 to-cyan-100",
       emoji: "🌿",
-      href: "https://your-lifestyle-portfolio-link.com",
+      href: "https://your-lifestyle-portfolio.com",
     },
   ],
   stats: [
@@ -106,7 +104,7 @@ export const CONFIG: CONFIGType = {
     },
     {
       value: "25+",
-      label: { en: "Happy Brand Partners", ar: "شريك تجاري سعيد", fr: "Marques partenaires" },
+      label: { en: "Brand Partners", ar: "شريك تجاري", fr: "Marques partenaires" },
     },
   ],
   whyMe: {
@@ -116,9 +114,9 @@ export const CONFIG: CONFIGType = {
       fr: "L'Esthétique par les Données",
     },
     body: {
-      en: "As a computer science major, I don't just create 'pretty' videos—I understand the algorithmic triggers and UX principles that convert viewers. I bridge the gap between creative storytelling and direct-response performance, ensuring every deliverable feels premium and approachable.",
-      ar: "بصفتي طالبة علوم كمبيوتر، أنا لا أنشئ فيديوهات 'جميلة' فحسب، بل أفهم محفزات الخوارزميات ومبادئ تجربة المستخدم التي تحول المشاهدين. أمزج بين سرد القصص الإبداعي والأداء القائم على الاستجابة المباشرة، مما يضمن أن يكون كل محتوى راقياً.",
-      fr: "En tant qu'étudiante en informatique, je ne crée pas de 'jolies' vidéos : je comprends les algorithmes. J'allie storytelling créatif et performance (direct-response) pour un rendu premium.",
+      en: "As a computer science major, I don't just create 'pretty' videos—I understand the algorithmic triggers and UX principles that convert viewers. I bridge the gap between creative storytelling and direct-response performance.",
+      ar: "بصفتي طالبة علوم كمبيوتر، أنا لا أنشئ فيديوهات 'جميلة' فحسب، بل أفهم محفزات الخوارزميات ومبادئ تجربة المستخدم التي تحول المشاهدين. أمزج بين سرد القصص الإبداعي والأداء القائم على الاستجابة المباشرة.",
+      fr: "En tant qu'étudiante en informatique, je ne crée pas de 'jolies' vidéos : je comprends les algorithmes. J'allie storytelling créatif et performance pour un rendu premium.",
     },
   },
   services: {
@@ -139,7 +137,7 @@ export const CONFIG: CONFIGType = {
       ],
       fr: [
         "Démos UX Applications/SaaS",
-        "Ads payantes haute conversion",
+        "Ads payantes haute performance",
         "Unboxing produit esthétique",
         "B-roll lifestyle cinématographique",
         "Optimisation script & hook",
