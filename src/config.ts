@@ -41,127 +41,132 @@ export interface CONFIGType {
     sectionLabels: Record<string, Record<Lang, string>>;
   };
 }
+
 export const CONFIG: CONFIGType = {
   creator: {
     name: {
-      en: "Hafsa Kadari",
-      ar: "حفصة قدري",
-      fr: "Hafsa Kadari",
+      en: "Chloe Evans",
+      ar: "كلوي إيفانز",
+      fr: "Chloe Evans",
     },
-    initials: "HK",
+    initials: "CE",
+    // Make sure your new placeholder image is in /public/avatar-placeholder.jpg
+    avatarUrl: "/avatar-placeholder.jpg", 
     title: {
-      en: "Aesthetic UGC & Visual Storyteller",
-      ar: "صانعة محتوى UGC وقصص بصرية",
-      fr: "Créatrice UGC & Storyteller Visuelle",
+      en: "Aesthetic Tech & Wellness UGC",
+      ar: "صانعة محتوى تقنية وعافية UGC",
+      fr: "Créatrice UGC Tech & Bien-être",
     },
     bio: {
-      en: "I bridge the gap between tech-savviness and creative aesthetics. I craft high-conversion, 'quiet luxury' content that turns viewers into loyal customers.",
-      ar: "أجمع بين الخبرة التقنية والجمالية الإبداعية. أصنع محتوى 'الفخامة الهادئة' عالي التحويل الذي يحول المشاهدين إلى عملاء مخلصين.",
-      fr: "Je fais le pont entre expertise technique et esthétique créative. Je crée du contenu 'quiet luxury' à haute conversion pour fidéliser votre audience.",
+      en: "CS Student by day, Visual Storyteller by night. I blend technical insight with a minimalist aesthetic to create high-conversion content for forward-thinking brands.",
+      ar: "طالبة علوم كمبيوتر في النهار، وقاصة بصرية في الليل. أمزج بين الرؤية التقنية والجمالية البسيطة لإنشاء محتوى عالي التحويل للعلامات التجارية الطموحة.",
+      fr: "Étudiante en informatique le jour, Storyteller Visuelle la nuit. J'allie expertise technique et esthétique minimaliste pour un contenu à haute conversion.",
     },
   },
   status: {
     available: {
-      en: "Accepting Q3 & Q4 collaborations",
-      ar: "متاحة لتعاونات الربع الثالث والرابع",
-      fr: "Disponible pour collaborations Q3 & Q4",
+      en: "Accepting Q3 Collabs",
+      ar: "متاحة لتعاونات الربع الثالث",
+      fr: "Disponible pour collaborations T3",
     },
     location: {
-      en: "Sidi Bel Abbès → Worldwide",
-      ar: "سيدي بلعباس ← حول العالم",
-      fr: "Sidi Bel Abbès → International",
+      en: "London → Worldwide",
+      ar: "لندن ← حول العالم",
+      fr: "Londres → International",
     },
   },
   portfolio: [
     {
-      title: { en: "Beauty & Skincare", ar: "الجمال والعناية", fr: "Beauté & Soin" },
-      category: { en: "15+ campaigns", ar: "١٥+ حملة", fr: "15+ campagnes" },
-      accent: "from-pink-200 via-rose-100 to-orange-100",
-      emoji: "💄",
-      href: "https://claude.ai/new",
-    },
-    {
-      title: { en: "Tech & Digital", ar: "التقنية والخدمات", fr: "Tech & Digital" },
-      category: { en: "10+ SaaS demos", ar: "١٠+ عروض تقنية", fr: "10+ démos SaaS" },
-      accent: "from-slate-300 via-blue-100 to-cyan-100",
+      title: { en: "Mindful Tech", ar: "التقنية الواعية", fr: "Tech Consciente" },
+      category: { en: "8+ SaaS Demos", ar: "٨+ عروض برمجية", fr: "8+ démos SaaS" },
+      // I softened these gradients to match the 'Quiet Luxury' London aesthetic
+      accent: "from-slate-200 via-stone-100 to-zinc-100", 
       emoji: "💻",
-      href: "https://github.com/inlockofficial"
+      href: "https://your-tech-portfolio-link.com", 
     },
     {
-      title: { en: "Minimalist Style", ar: "أزياء هادئة", fr: "Style Minimaliste" },
-      category: { en: "8+ lookbooks", ar: "٨+ كتيبات أزياء", fr: "8+ lookbooks" },
-      accent: "from-stone-300 via-neutral-100 to-slate-100",
+      title: { en: "Wellness & Style", ar: "العافية والأناقة", fr: "Bien-être & Style" },
+      category: { en: "15+ Campaigns", ar: "١٥+ حملة", fr: "15+ campagnes" },
+      accent: "from-rose-100 via-peach-100 to-orange-100",
       emoji: "✨",
+      href: "https://your-wellness-portfolio-link.com",
+    },
+    {
+      title: { en: "Minimalist Living", ar: "الحياة البسيطة", fr: "Vie Minimaliste" },
+      category: { en: "10+ Lookbooks", ar: "١٠+ كتيبات أزياء", fr: "10+ lookbooks" },
+      accent: "from-emerald-100 via-teal-100 to-cyan-100",
+      emoji: "🌿",
+      href: "https://your-lifestyle-portfolio-link.com",
     },
   ],
   stats: [
     {
-      value: "1.2M",
-      label: { en: "Monthly reach", ar: "الوصول الشهري", fr: "Portée mensuelle" },
+      value: "950K+",
+      label: { en: "Monthly Impressions", ar: "انطباع شهري", fr: "Impressions mensuelles" },
     },
     {
-      value: "30+",
-      label: { en: "Brand partners", ar: "شريك تجاري", fr: "Marques partenaires" },
+      value: "25+",
+      label: { en: "Happy Brand Partners", ar: "شريك تجاري سعيد", fr: "Marques partenaires" },
     },
   ],
   whyMe: {
     heading: {
-      en: "The Strategy Behind the Lens",
-      ar: "الاستراتيجية خلف العدسة",
-      fr: "La Stratégie derrière l'Objectif",
+      en: "Data-Driven Aesthetics",
+      ar: "جماليات مدفوعة بالبيانات",
+      fr: "L'Esthétique par les Données",
     },
     body: {
-      en: "As a Computer Science student, I don't just 'make videos'—I understand the algorithms and UX patterns that drive engagement. I blend data-driven hooks with an 'old money' minimalist aesthetic to ensure your brand feels both premium and approachable.",
-      ar: "بصفتي طالبة في علوم الكمبيوتر، أنا لا 'أصنع فيديوهات' فحسب، بل أفهم الخوارزميات وأنماط تجربة المستخدم. أمزج بين الاستراتيجية والجمالية الهادئة لضمان ظهور علامتك التجارية بشكل راقٍ.",
-      fr: "En tant qu'étudiante en informatique, je ne fais pas que 'des vidéos' : je comprends les algorithmes. J'allie stratégie de conversion et esthétique minimaliste pour un rendu premium.",
+      en: "As a computer science major, I don't just create 'pretty' videos—I understand the algorithmic triggers and UX principles that convert viewers. I bridge the gap between creative storytelling and direct-response performance, ensuring every deliverable feels premium and approachable.",
+      ar: "بصفتي طالبة علوم كمبيوتر، أنا لا أنشئ فيديوهات 'جميلة' فحسب، بل أفهم محفزات الخوارزميات ومبادئ تجربة المستخدم التي تحول المشاهدين. أمزج بين سرد القصص الإبداعي والأداء القائم على الاستجابة المباشرة، مما يضمن أن يكون كل محتوى راقياً.",
+      fr: "En tant qu'étudiante en informatique, je ne crée pas de 'jolies' vidéos : je comprends les algorithmes. J'allie storytelling créatif et performance (direct-response) pour un rendu premium.",
     },
   },
   services: {
     items: {
       en: [
-        "Organic UGC (TikTok/Reels)",
-        "High-performance Paid Ads",
-        "Tech & App unboxing videos",
-        "Aesthetic Product B-roll",
-        "Scriptwriting & Hook optimization",
+        "SaaS/App UX Walkthroughs",
+        "High-Conversion Paid Ads",
+        "Aesthetic Product Unboxing",
+        "Cinematic Lifestyle B-Roll",
+        "Script & Hook Optimization",
       ],
       ar: [
-        "محتوى UGC عضوي (تيك توك/ريلز)",
-        "إعلانات مدفوعة عالية الأداء",
-        "فيديوهات فتح الصناديق للتقنية",
-        "تصوير جمالي للمنتجات",
-        "كتابة السكريبت وتحسين الافتتاحية",
+        "شرح تجربة المستخدم للتطبيقات",
+        "إعلانات مدفوعة عالية التحويل",
+        "فتح صناديق المنتجات الجمالية",
+        "تصوير نمط حياة سينمائي",
+        "تحسين السكريبت والافتتاحية",
       ],
       fr: [
-        "UGC Organique (TikTok/Reels)",
-        "Ads payantes haute performance",
-        "Unboxing Tech & Applications",
-        "B-roll produit esthétique",
-        "Écriture de scripts & optimisation",
+        "Démos UX Applications/SaaS",
+        "Ads payantes haute conversion",
+        "Unboxing produit esthétique",
+        "B-roll lifestyle cinématographique",
+        "Optimisation script & hook",
       ],
     },
   },
   testimonial: {
     quote: {
-      en: "Hafsa understands brand DNA instantly. Her content saw a 40% increase in our ad engagement within 48 hours.",
-      ar: "حفصة تفهم هوية العلامة التجارية فوراً. حقق محتواها زيادة بنسبة ٤٠٪ في التفاعل خلال ٤٨ ساعة.",
-      fr: "Hafsa comprend instantanément l'ADN de la marque. Son contenu a boosté notre engagement de 40% en 48h.",
+      en: "Chloe didn't just deliver content—she delivered our best-performing ad of the quarter. She perfectly captures our premium brand voice.",
+      ar: "كلوي لم تقدم محتوى فحسب، بل قدمت أفضل إعلان أداءً في الربع. لقد جسدت صوت علامتنا التجارية الراقية تماماً.",
+      fr: "Chloe n'a pas livré du contenu : elle a livré notre meilleure pub du trimestre. Elle capture parfaitement notre image de marque premium.",
     },
     author: {
-      en: "— Creative Director @ Luxe Beauty",
-      ar: "— المدير الإبداعي في Luxe Beauty",
-      fr: "— Directrice Créative @ Luxe Beauty",
+      en: "— Sarah M., Growth Lead @ Aura Wellness",
+      ar: "— سارة م.، قائدة النمو في Aura Wellness",
+      fr: "— Sarah M., Growth Lead @ Aura Wellness",
     },
   },
   cta: {
-    title: { en: "Let's Scale Your Brand", ar: "لنطور علامتك التجارية", fr: "Boostons votre marque" },
+    title: { en: "Let's Elevate Your Brand", ar: "لنرفع مستوى علامتك التجارية", fr: "Sublimons votre marque" },
     subtitle: {
       en: "Ready to create content that actually converts?",
       ar: "هل أنت مستعد لإنشاء محتوى يحقق نتائج فعلاً؟",
       fr: "Prêt à créer du contenu qui convertit vraiment ?",
     },
     button: { en: "Book a Discovery Call →", ar: "احجز مكالمة استشارية ←", fr: "Réserver un appel →" },
-    href: "mailto:hello@hafsa.studio",
+    href: "mailto:hello@chloe.studio",
   },
   ui: {
     sectionLabels: {
