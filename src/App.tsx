@@ -105,36 +105,49 @@ export default function App() {
           </div>
 
           {/* PORTFOLIO 3x (4x2) */}
-          {t.portfolio.map((p, i) => (
-            <div
-              key={i}
-              className="glass-card relative col-span-1 overflow-hidden rounded-3xl p-6 md:col-span-4 md:row-span-2"
-            >
-              <div
-                className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${p.accent}`}
-              />
-              <div className="flex h-full flex-col justify-between">
-                <div>
-                  <Label text={t.ui.sectionLabels.portfolio[lang]} />
-                  <div className="mt-3 text-4xl">{p.emoji}</div>
-                  <h3
-                    className="mt-3 text-2xl font-semibold tracking-tight text-slate-900"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    {p.title[lang]}
-                  </h3>
-                </div>
-                <div className="mt-6 flex items-center justify-between">
-                  <span className="text-sm text-slate-600">{p.category[lang]}</span>
-                  <span
-                    className={`inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${p.accent} text-white shadow-md`}
-                  >
-                    {isRTL ? "←" : "→"}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+{t.portfolio.map((p, i) => (
+  <a
+    key={i}
+    href={p.href || "#"}
+    target={p.href ? "_blank" : undefined}
+    rel="noopener noreferrer"
+    className={`glass-card group relative col-span-1 overflow-hidden rounded-3xl p-6 md:col-span-4 md:row-span-2 transition-all duration-300 ${
+      p.href ? "hover:-translate-y-1 hover:shadow-xl cursor-pointer" : ""
+    }`}
+  >
+    {/* Top accent border */}
+    <div
+      className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${p.accent}`}
+    />
+    
+    <div className="flex h-full flex-col justify-between">
+      <div>
+        <Label text={t.ui.sectionLabels.portfolio[lang]} />
+        <div className="mt-3 text-4xl transition-transform group-hover:scale-110 duration-300 flex">
+          {p.emoji}
+        </div>
+        <h3
+          className="mt-3 text-2xl font-semibold tracking-tight text-slate-900"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {p.title[lang]}
+        </h3>
+      </div>
+
+      <div className="mt-6 flex items-center justify-between">
+        <span className="text-sm text-slate-600">{p.category[lang]}</span>
+        
+        {/* The Arrow Circle */}
+        <span
+          className={`inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${p.accent} text-white shadow-md transition-transform duration-300 group-hover:rotate-[-45deg]`}
+        >
+          {isRTL ? "←" : "→"}
+        </span>
+      </div>
+    </div>
+  </a>
+))}
+
 
           {/* STATS 2x (3x1) */}
           {t.stats.map((s, i) => (
