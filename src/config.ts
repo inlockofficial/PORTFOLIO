@@ -85,6 +85,7 @@ export const CONFIG: CONFIGType = {
       category: { en: "10+ SaaS demos", ar: "١٠+ عروض تقنية", fr: "10+ démos SaaS" },
       accent: "from-slate-300 via-blue-100 to-cyan-100",
       emoji: "💻",
+      href: "https://github.com/inlockofficial"
     },
     {
       title: { en: "Minimalist Style", ar: "أزياء هادئة", fr: "Style Minimaliste" },
