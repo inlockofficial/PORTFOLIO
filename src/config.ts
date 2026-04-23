@@ -1,3 +1,46 @@
+export type Lang = "en" | "ar" | "fr";
+
+export interface PortfolioItem {
+  title: Record<Lang, string>;
+  category: Record<Lang, string>;
+  accent: string; // tailwind gradient classes
+  emoji: string;
+  href?: string;
+}
+
+export interface CONFIGType {
+  creator: {
+    name: Record<Lang, string>;
+    initials: string;
+    avatarUrl?: string;
+    title: Record<Lang, string>;
+    bio: Record<Lang, string>;
+  };
+  status: {
+    available: Record<Lang, string>;
+    location: Record<Lang, string>;
+  };
+  portfolio: PortfolioItem[];
+  stats: { value: string; label: Record<Lang, string> }[];
+  whyMe: {
+    heading: Record<Lang, string>;
+    body: Record<Lang, string>;
+  };
+  services: { items: Record<Lang, string[]> };
+  testimonial: {
+    quote: Record<Lang, string>;
+    author: Record<Lang, string>;
+  };
+  cta: {
+    title: Record<Lang, string>;
+    subtitle: Record<Lang, string>;
+    button: Record<Lang, string>;
+    href: string;
+  };
+  ui: {
+    sectionLabels: Record<string, Record<Lang, string>>;
+  };
+}
 export const CONFIG: CONFIGType = {
   creator: {
     name: {
@@ -35,6 +78,7 @@ export const CONFIG: CONFIGType = {
       category: { en: "15+ campaigns", ar: "١٥+ حملة", fr: "15+ campagnes" },
       accent: "from-pink-200 via-rose-100 to-orange-100",
       emoji: "💄",
+      href: "https://claude.ai/new",
     },
     {
       title: { en: "Tech & Digital", ar: "التقنية والخدمات", fr: "Tech & Digital" },
